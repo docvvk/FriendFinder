@@ -1,12 +1,12 @@
 var path = require('path');
 
 //Stores friends database into friends variable
-var friends = require("../data/friends");
+var friends = require("../data/friends.js");
 
 module.exports = function (app) {
 
     app.get("/api/friends", (req,res) => {
-        res.join(friends);
+        return res.json(friends);
     })
 
     app.post("/api/friends", (req,res) => {
