@@ -177,7 +177,7 @@
                     </div>
                     <div class="modal-body">
                         <h2 id="match-name"></h2>
-                        <img id="match-img" width="200px" src="https://i.kinja-img.com/gawker-media/image/upload/s--CMWq43f_--/c_scale,f_auto,fl_progressive,q_80,w_800/rqvem0jjcmm0bera2nss.jpg" alt="">
+                        <img id="match-img" width="200px" src="https://i.kinja-img.com/gawker-media/image/upload/s--CMWq43f_--/c_scale,f_auto,fl_progressive,q_80,w_800/rqvem0jjcmm0bera2nss.jpg" alt="Character Image">
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-default" data-dismiss="modal">Close</button>
@@ -255,8 +255,8 @@
                         $.post("/api/friends", userData, function (data) {
                             console.log(data);
                             
-                            $("match-name").text(data.name);
-                            $("match-img").attr("src", data.photo);
+                            $("#match-name").text(data.name);
+                            $("#match-img").attr("src", data.photo);
 
                             $("#results-modal").modal("toggle");
                         });

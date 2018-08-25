@@ -23,11 +23,13 @@ module.exports = function (app) {
             for (var x = 0; x < friends[i].scores.length; x++) {
 
                 mathArray.push(Math.abs(req.body.scores[x] - friends[i].scores[x]));
+                // console.log(mathArray);
             };
 
             for (var y = 0; y < mathArray.length; y++) {
                 totalDifference += mathArray[y];
             }
+            // console.log(totalDifference)
 
             if (matchLogic == {}) {
                 matchLogic = friends[i];
@@ -41,6 +43,7 @@ module.exports = function (app) {
         console.log('Your match is: ' + match.name);
 
         // Push new person into friends array
+        console.log(req.body)
         friends.push(req.body);
         res.json(match);
     });
