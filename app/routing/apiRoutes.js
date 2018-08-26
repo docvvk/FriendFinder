@@ -43,7 +43,9 @@ module.exports = function (app) {
         console.log('Your match is: ' + match.name);
 
         // Push new person into friends array
-        console.log(req.body)
+        console.log(req.body.name)
+        console.log(req.body.photo)
+        console.log(req.scores)
         friends.push(req.body);
         res.json(match);
     });
